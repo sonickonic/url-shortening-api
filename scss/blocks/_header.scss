@@ -1,0 +1,20 @@
+.header {
+  position: relative;
+  display: flex;
+  width: 90%;
+  margin: 2.3rem auto 1em;
+}
+
+@include screen-l {
+  .header {
+    align-items: center;
+    justify-content: space-between;
+    width: 77%;
+    max-width: 1109px;
+    margin: 3rem auto 1em;
+
+    &__logo {
+      margin-right: 3rem;
+    }
+  }
+}

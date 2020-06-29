@@ -1,0 +1,16 @@
+.btn {
+  padding: 0.6em 2em;
+  border: none;
+  border-radius: 3em;
+  background-color: $cyan;
+  cursor: pointer;
+  transition: background-color ease-out 200ms;
+
+  &:hover {
+    background-color: lighten($color: $cyan, $amount: 30%);
+  }
+}
+
+.btn--rectangle {
+  border-radius: 0.5em;
+}

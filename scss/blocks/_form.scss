@@ -1,0 +1,52 @@
+.form {
+  position: absolute;
+  top: -4.8em;
+  left: 5%;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  padding: 1.2rem;
+  background-color: $violet;
+  background-image: url(/images/bg-shorten-mobile.svg);
+  background-repeat: no-repeat;
+  background-position: top right;
+  background-size: 70%;
+  width: 90%;
+  border-radius: 0.5rem;
+  z-index: 1;
+
+  &__input {
+    padding: 0.666em;
+    border-radius: 0.5em;
+    border: none;
+    margin-bottom: 0.9em;
+  }
+}
+
+@include screen-m {
+  .form {
+    max-width: 720px;
+    left: 50%;
+    margin-left: -360px;
+  }
+}
+
+@include screen-l {
+  .form {
+    background-image: url(/images/bg-shorten-desktop.svg);
+    background-size: auto;
+    max-width: 1109px;
+    left: 50%;
+    margin-left: -554.5px;
+    flex-direction: row;
+    padding: 3rem;
+
+    &__input {
+      display: flex;
+      flex-grow: 1;
+      padding-left: 1.5em;
+      margin-bottom: 0;
+      margin-right: 1.5rem;
+    }
+  }
+}

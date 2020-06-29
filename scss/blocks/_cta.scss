@@ -1,0 +1,24 @@
+.cta {
+  padding: 5em 0;
+  background-image: url(/images/bg-boost-mobile.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-color: $violet;
+
+  &__title {
+    margin-bottom: 0.5rem;
+  }
+}
+
+@include screen-l {
+  .cta {
+    padding: 3rem 0;
+    background-image: url(/images/bg-boost-desktop.svg);
+    background-position: top left;
+
+    &__title {
+      margin-bottom: 1rem;
+    }
+  }
+}

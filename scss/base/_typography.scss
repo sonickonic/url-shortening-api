@@ -1,0 +1,119 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap");
+
+html,
+.btn,
+input {
+  font-family: "Poppins", sans-serif;
+  font-size: 18px;
+  line-height: 1.7;
+}
+
+body {
+  text-align: center;
+}
+
+.btn,
+.nav {
+  color: white;
+  font-weight: 700;
+  font-size: 20px;
+}
+
+.nav {
+  &__item {
+    color: white;
+    text-decoration: none;
+  }
+}
+
+.section-hero {
+  &__title {
+    color: $title;
+    font-size: 2.333rem;
+    font-weight: 700;
+    line-height: 1.2em;
+  }
+
+  &__text {
+    color: $text;
+  }
+}
+
+.card {
+  &__title {
+    color: $title;
+  }
+
+  &__text {
+    font-size: 0.88rem;
+    color: $text;
+  }
+}
+
+.cta {
+  color: white;
+}
+
+.footer {
+  color: white;
+  font-size: 0.888rem;
+
+  &__list {
+    &-item {
+      &--bold {
+        font-weight: bold;
+      }
+    }
+  }
+
+  &__link {
+    color: $text;
+    text-decoration: none;
+
+    &:hover {
+      color: $cyan;
+    }
+  }
+}
+
+@include screen-min {
+  .nav{
+    &__item:hover {
+      color: $cyan;
+    }
+  }
+
+}
+
+@include screen-l {
+  .nav {
+    &__item {
+      color: $text;
+    }
+
+    &__item:hover {
+      color: $title;
+    }
+  }
+
+  .section-hero {
+    text-align: left;
+
+    &__title {
+      font-size: 4.5rem;
+      line-height: 1.1em;
+    }
+
+    &__text {
+      font-size: 1.2rem;
+    }
+  }
+
+  .cta {
+    font-size: 1.333rem;
+  }
+
+  .footer{
+    text-align: left;
+  }
+}

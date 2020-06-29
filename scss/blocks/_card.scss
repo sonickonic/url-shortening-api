@@ -1,0 +1,131 @@
+.card {
+  position: relative;
+  background-color: white;
+  border-radius: 0.3em;
+  padding: 1rem;
+  padding-top: 4em;
+  width: 90%;
+  max-width: 350px;
+  margin: 0 auto;
+  margin-bottom: 6rem;
+
+  &__text {
+    margin: 1em 0.8em;
+  }
+
+  &:last-child {
+    margin-bottom: 0em;
+  }
+
+  &:after {
+    content: " ";
+    position: absolute;
+    top: -6rem;
+    right: 50%;
+    margin-right: -5px;
+    background-color: $cyan;
+    height: 6rem;
+    width: 0.4rem;
+    z-index: 1;
+  }
+
+  &--brand::after {
+    content: none;
+  }
+
+  &--brand::before,
+  &--records::before,
+  &--customizable::before {
+    content: " ";
+    z-index: 2;
+    position: absolute;
+    top: -2.22rem;
+    left: 50%;
+    margin-left: -2.3rem;
+    background-image: url(/images/icon-brand-recognition.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-color: $violet;
+    width: 2.22rem;
+    height: 2.22rem;
+    padding: 1.2em;
+    border-radius: 50%;
+  }
+
+  &--records::before {
+    background-image: url(/images/icon-detailed-records.svg);
+  }
+
+  &--customizable::before {
+    background-image: url(/images/icon-fully-customizable.svg);
+  }
+}
+
+@include screen-l {
+  .card {
+    text-align: left;
+    padding: 1.5rem;
+    padding-top: 4em;
+    margin: 0;
+
+    &__text {
+      margin: 1em 0;
+    }
+
+    &__title--bigger {
+      font-size: 2rem;
+    }
+
+    &--brand {
+      align-self: flex-start;
+    }
+
+    &--customizable {
+      align-self: flex-end;
+    }
+
+    &--brand::before,
+    &--records::before,
+    &--customizable::before {
+      left: 20%;
+    }
+
+    &:after {
+      content: " ";
+      position: absolute;
+      top: 6rem;
+      left: -1.6rem;
+      height: 0.4rem;
+      width: 1.6rem;
+      z-index: 1;
+    }
+
+    &--brand::after {
+      content: none;
+    }
+
+    &--customizable::after {
+      top: 3.5rem;
+    }
+  }
+}
+
+.card--simple {
+  background-color: transparent;
+  padding: 9rem 0 0 0;
+
+  &:after {
+    content: none;
+  }
+}
+
+@include screen-l {
+  .card--simple {
+    max-width: 500px;
+    text-align: center;
+    margin: 0 auto;
+    margin-bottom: 6rem;
+    padding: 11rem 0 0 0;
+  }
+}
