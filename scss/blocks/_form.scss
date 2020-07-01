@@ -21,6 +21,36 @@
     border: none;
     margin-bottom: 0.9em;
   }
+
+  &__card {
+    background-color: white;
+    border-radius: 0.3em;
+    padding: 1rem;
+    width: 90%;
+    max-width: 350px;
+    margin: 0 auto;
+    margin-top: 1rem;
+    text-align: left;
+  }
+
+  &__card-link {
+    color: $title;
+    padding-bottom: 1em;
+  }
+
+  &__card-line{
+    content: " ";
+    margin: 0 -1em;
+    max-width: 350px;
+    height: 1px;
+    background-color: $text;
+  }
+
+  &__card-url {
+    color: $cyan;
+    padding-top: 1em;
+    padding-bottom: 1em;
+  }
 }
 
 @include screen-m {

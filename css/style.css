@@ -229,10 +229,19 @@ body {
   border-radius: 0.5em;
 }
 
+.btn--copy {
+  width: 100%;
+}
+
+.btn--clicked {
+  background-color: #3b3054;
+}
+
 .section {
   position: relative;
   background-color: #eff0f5;
   padding-bottom: 4em;
+  padding-top: 5rem;
 }
 
 .section-hero {
@@ -319,6 +328,32 @@ body {
   border-radius: 0.5em;
   border: none;
   margin-bottom: 0.9em;
+}
+.form__card {
+  background-color: white;
+  border-radius: 0.3em;
+  padding: 1rem;
+  width: 90%;
+  max-width: 350px;
+  margin: 0 auto;
+  margin-top: 1rem;
+  text-align: left;
+}
+.form__card-link {
+  color: #35323e;
+  padding-bottom: 1em;
+}
+.form__card-line {
+  content: " ";
+  margin: 0 -1em;
+  max-width: 350px;
+  height: 1px;
+  background-color: #9e9aa7;
+}
+.form__card-url {
+  color: #2acfcf;
+  padding-top: 1em;
+  padding-bottom: 1em;
 }
 
 @media (min-width: 800px) {
@@ -441,7 +476,6 @@ body {
 }
 .card--simple {
   background-color: transparent;
-  padding: 9rem 0 0 0;
 }
 .card--simple:after {
   content: none;
