@@ -6,6 +6,10 @@
   cursor: pointer;
   transition: background-color ease-out 200ms;
 
+  &:focus {
+    outline: none;
+  }
+
   &:hover {
     background-color: lighten($color: $cyan, $amount: 30%);
   }
@@ -15,10 +19,7 @@
   border-radius: 0.5em;
 }
 
-.btn--copy {
-  width: 100%;
-}
-
 .btn--clicked {
   background-color: $violet;
 }
+

@@ -15,6 +15,10 @@
   border-radius: 0.5rem;
   z-index: 1;
 
+  ::placeholder {
+    opacity: 0.8;
+  }
+
   &__input {
     padding: 0.666em;
     border-radius: 0.5em;
@@ -22,12 +26,18 @@
     margin-bottom: 0.9em;
   }
 
+  &__input--error {
+    box-shadow: inset 0px 0px 0px 3px $red;
+  }
+
   &__card {
+    display: flex;
+    flex-direction: column;
     background-color: white;
     border-radius: 0.3em;
     padding: 1rem;
     width: 90%;
-    max-width: 350px;
+    max-width: 720px;
     margin: 0 auto;
     margin-top: 1rem;
     text-align: left;
@@ -36,12 +46,15 @@
   &__card-link {
     color: $title;
     padding-bottom: 1em;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
   }
 
-  &__card-line{
+  &__card-line {
     content: " ";
     margin: 0 -1em;
-    max-width: 350px;
+    max-width: 720px;
     height: 1px;
     background-color: $text;
   }
@@ -50,6 +63,17 @@
     color: $cyan;
     padding-top: 1em;
     padding-bottom: 1em;
+  }
+
+  &--error-message {
+    margin-top: -0.8rem;
+    margin-bottom: 1rem;
+  }
+}
+
+.form--error {
+  ::placeholder {
+    opacity: 0.5;
   }
 }
 
@@ -77,6 +101,35 @@
       padding-left: 1.5em;
       margin-bottom: 0;
       margin-right: 1.5rem;
+    }
+
+    &__card {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 1109px;
+      padding: 1rem 2rem;
+    }
+
+    &__card-link {
+      padding-bottom: 0em;
+      max-width: 35em;
+    }
+
+    &__card-url {
+      margin-left: auto;
+      margin-right: 2em;
+    }
+
+    &__card-line {
+      max-width: 1109px;
+    }
+
+    &--error-message {
+      position: absolute;
+      bottom: 0;
+      margin-bottom: 1.8em;
     }
   }
 }

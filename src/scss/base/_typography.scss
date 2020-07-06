@@ -39,6 +39,25 @@ body {
   }
 }
 
+.form {
+  ::placeholder {
+    color: $text;
+  }
+
+  &--error-message {
+    font-size: 14px;
+    text-align: left;
+    font-style: italic;
+    color: $red;
+  }
+}
+
+.form--error {
+  ::placeholder {
+    color: $red;
+  }
+}
+
 .card {
   &__title {
     color: $title;
