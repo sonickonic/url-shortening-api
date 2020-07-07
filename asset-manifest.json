@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/url-shortening-api/static/css/main.c4cf2b20.chunk.css",
+    "main.css": "/url-shortening-api/static/css/main.a78b3502.chunk.css",
     "main.js": "/url-shortening-api/static/js/main.40e1556b.chunk.js",
     "main.js.map": "/url-shortening-api/static/js/main.40e1556b.chunk.js.map",
     "runtime-main.js": "/url-shortening-api/static/js/runtime-main.49323ceb.js",
@@ -8,15 +8,16 @@
     "static/js/2.61a64b21.chunk.js": "/url-shortening-api/static/js/2.61a64b21.chunk.js",
     "static/js/2.61a64b21.chunk.js.map": "/url-shortening-api/static/js/2.61a64b21.chunk.js.map",
     "index.html": "/url-shortening-api/index.html",
-    "precache-manifest.621e1a04b42e8ac71e864d6176270397.js": "/url-shortening-api/precache-manifest.621e1a04b42e8ac71e864d6176270397.js",
+    "precache-manifest.438adbf6e97d89438058815b266a1c7d.js": "/url-shortening-api/precache-manifest.438adbf6e97d89438058815b266a1c7d.js",
     "service-worker.js": "/url-shortening-api/service-worker.js",
-    "static/css/main.c4cf2b20.chunk.css.map": "/url-shortening-api/static/css/main.c4cf2b20.chunk.css.map",
-    "static/js/2.61a64b21.chunk.js.LICENSE.txt": "/url-shortening-api/static/js/2.61a64b21.chunk.js.LICENSE.txt"
+    "static/css/main.a78b3502.chunk.css.map": "/url-shortening-api/static/css/main.a78b3502.chunk.css.map",
+    "static/js/2.61a64b21.chunk.js.LICENSE.txt": "/url-shortening-api/static/js/2.61a64b21.chunk.js.LICENSE.txt",
+    "static/media/style.scss": "/url-shortening-api/static/media/icon-fully-customizable.cc099cea.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.49323ceb.js",
     "static/js/2.61a64b21.chunk.js",
-    "static/css/main.c4cf2b20.chunk.css",
+    "static/css/main.a78b3502.chunk.css",
     "static/js/main.40e1556b.chunk.js"
   ]
 }
