@@ -7,7 +7,7 @@
   margin: auto;
   padding: 1.2rem;
   background-color: $violet;
-  background-image: url(/images/bg-shorten-mobile.svg);
+  background-image: url(../../images/bg-shorten-mobile.svg);
   background-repeat: no-repeat;
   background-position: top right;
   background-size: 70%;
@@ -87,7 +87,7 @@
 
 @include screen-l {
   .form {
-    background-image: url(/images/bg-shorten-desktop.svg);
+    background-image: url(../../images/bg-shorten-desktop.svg);
     background-size: auto;
     max-width: 1109px;
     left: 50%;

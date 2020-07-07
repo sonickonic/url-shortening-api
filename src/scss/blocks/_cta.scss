@@ -1,6 +1,6 @@
 .cta {
   padding: 5em 0;
-  background-image: url(/images/bg-boost-mobile.svg);
+  background-image: url(../../images/bg-boost-mobile.svg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -14,7 +14,7 @@
 @include screen-l {
   .cta {
     padding: 3rem 0;
-    background-image: url(/images/bg-boost-desktop.svg);
+    background-image: url(../../images/bg-boost-desktop.svg);
     background-position: top left;
 
     &__title {
