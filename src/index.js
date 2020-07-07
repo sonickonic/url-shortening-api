@@ -1,11 +1,11 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import "./scss/style.scss";
-import App from "./App";
+import UrlShortener from "./UrlShortener";
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <UrlShortener />
   </React.StrictMode>,
   document.getElementById("root")
 );

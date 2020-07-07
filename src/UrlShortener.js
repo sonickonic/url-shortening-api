@@ -43,7 +43,7 @@ function Card({ card }) {
   );
 }
 
-const App = () => {
+const UrlShortener = () => {
   const [url, setUrl] = useState("");
   const [error, setError] = useState("");
 
@@ -104,4 +104,4 @@ const App = () => {
     </div>
   );
 };
-export default App;
+export default UrlShortener;
