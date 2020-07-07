@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 function Form({ url, handleChange, handleClick, error }) {
   return (
@@ -11,16 +11,21 @@ function Form({ url, handleChange, handleClick, error }) {
         value={url}
         onChange={handleChange}
       />
-      {error && <p className="form--error-message">{error}</p>}   
+      {error && <p className="form--error-message">{error}</p>}
       <button onClick={handleClick} className="btn btn--rectangle">
         Shorten It!
-      </button>   
+      </button>
     </div>
   );
 }
 
-function Card({ card, handleClick}) {
+function Card({ card }) {
   const [copied, setCopied] = useState(false);
+
+  const handleCopy = () => {
+    setCopied(true);
+    navigator.clipboard.writeText(`https://rel.ink/${card.hashId}`);
+  };
 
   return (
     <div className="form__card">
@@ -28,7 +33,7 @@ function Card({ card, handleClick}) {
       <div className="form__card-line"></div>
       <p className="form__card-url">{`https://rel.ink/${card.hashId}`}</p>
       <button
-        onClick={() => setCopied(true)}
+        onClick={handleCopy}
         className={`btn btn--rectangle btn--copy ${copied && "btn--clicked"}`}
         type="submit"
       >
@@ -40,11 +45,28 @@ function Card({ card, handleClick}) {
 
 const App = () => {
   const [url, setUrl] = useState("");
-  const [cards, setCards] = useState([]);
   const [error, setError] = useState("");
 
+  const [cards, setCards] = useState(() => {
+    const localData = localStorage.getItem("cards");
+    return localData ? JSON.parse(localData) : [];
+  });
+
+  useEffect(() => {
+    localStorage.setItem("cards", JSON.stringify(cards));
+  }, [cards]);
+
+  function isValid(url) {
+    const regex = /(http(s)?:\/\/.)?(www\.)?[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*)/g;
+    const result = url.match(regex);
+    if (result) {
+      return true;
+    }
+    return false;
+  }
+
   const shorten = () => {
-    if (!url) {
+    if (!isValid(url)) {
       return setError("Please add a link");
     }
 
@@ -83,6 +105,3 @@ const App = () => {
   );
 };
 export default App;
-
-// POST https://rel.ink/api/links/
-// GET https://rel.ink/api/links/Nn8y9p/
